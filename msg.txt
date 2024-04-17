@@ -1,0 +1,1 @@
+This is a test string written to msg.txt.
