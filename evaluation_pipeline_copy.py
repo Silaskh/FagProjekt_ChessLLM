@@ -15,7 +15,7 @@ def gen_legal_moves(board,frac=1):
     else:
         return np.random.choice(legal_moves, math.floor(frac*len(legal_moves)), replace=False)
 ##SYNTETIC DATA GENERATION##
-def generate_synthetic_data_dict(N,size,seed,df):
+def generate_synthetic_data_dict(N,size,df,seed=1):
     if size == 1:
         return generate_synthetic_data_single(N,seed,df)
     data = []
@@ -41,7 +41,7 @@ def generate_synthetic_data_single(N,seed,df):
         data.append(np.random.choice(legal_moves))
     return data
 
-path=("stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe")
+path=(r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe")
 
 def evaluate_move(board, move, path):
     #Evaluates the move before move and after move return the difference
@@ -69,23 +69,9 @@ def amount_index_zero(l,df):
             amount += 1
     return amount
 
-
-def amount_75th_percentile():
-    pass
-
-def amount_25th_percentile():
-    pass
-
-def amount_mean_taken_over_mu_moves():
-    pass
-
-
-amount = amount_index_zero(generate_synthetic_data_dict(10,1,df,1),df)
-amount 
-
 def evaluate_moves(fen, move_uci, dataframe):
-    # Path to Stockfish executable
-    stockfish_path = "stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
+     # Path to Stockfish executable
+    stockfish_path = r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
     
     # Load Stockfish engine
     with chess.engine.SimpleEngine.popen_uci(stockfish_path) as engine:
@@ -107,12 +93,22 @@ def evaluate_moves(fen, move_uci, dataframe):
         
         # Generate all legal moves
         legal_moves = list(board.legal_moves)
+
+        board = chess.Board(fen)
+        board.push(chess.Move.from_uci(move_uci))
+        info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
+        move_score_uci = info["score"].white().score(mate_score=10000)  # Get the POV score for White
+        # If it's Black to move, invert the score
+        if not is_white_to_move:
+            move_score_uci = -move_score_uci
+        move_uci_difference = move_score_uci - initial_score
         
         # Evaluate all legal moves
         move_differences = []
         for move in legal_moves:
+            board = chess.Board(fen)
             board.push(move)
-            info = engine.analyse(board, chess.engine.Limit(time=1.0))  # Increased time limit for stability
+            info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
             move_score = info["score"].white().score(mate_score=10000)  # Get the POV score for White
             # If it's Black to move, invert the score
             if not is_white_to_move:
@@ -123,40 +119,42 @@ def evaluate_moves(fen, move_uci, dataframe):
         
         # Convert to DataFrame
         moves_df = pd.DataFrame(move_differences, columns=['move', 'score_difference'])
+        moves_df.head()
+
+       
+        return move_uci_difference,initial_score, moves_df
         
-        # Calculate the 75th percentile score difference
+
+def percentiles(moves_df):
         score_75th_percentile = np.percentile(moves_df['score_difference'], 75)
         score_25th_percentile = np.percentile(moves_df['score_difference'], 25)
         score_50th_percentile = np.percentile(moves_df['score_difference'], 50)
-    
-        
-        # Get the score difference of the provided move
-        provided_move_score_difference = moves_df.loc[moves_df['move'] == move_uci, 'score_difference'].values[0]
-        
-        # Check if the provided move is within the 75th percentile
-        is_within_75th_percentile = provided_move_score_difference >= score_75th_percentile
-        is_within_50th_percentile = provided_move_score_difference >= score_50th_percentile
-        is_within_25th_percentile = provided_move_score_difference >= score_25th_percentile
-        
         # Return results
         result = {
-            "provided_move": move_uci,
-            "provided_move_score_difference": provided_move_score_difference,
             "score_75th_percentile": score_75th_percentile,
             "score_50th_percentile": score_50th_percentile,
-            "score_25th_percentile": score_25th_percentile,
-            "is_within_75th_percentile": is_within_75th_percentile,
-            "is_within_50th_percentile": is_within_50th_percentile,
-            "is_within_25th_percentile": is_within_25th_percentile
-        }
-        
+            "score_25th_percentile": score_25th_percentile,}
         return result
 
-# Example usage:
-fen = df['FEN'][0]
-move_uci = generate_synthetic_data_dict(1, 1, df,100)[0]
-print(move_uci)
+def in_percentile(score,percentile):
+    if score >= percentile["score_75th_percentile"]:
+        return np.array([0,0,0,1])
+    elif percentile["score_50th_percentile"] <= score < percentile["score_75th_percentile"]:
+        return np.array([0,0,1,0])
+    elif percentile["score_25th_percentile"] <= score < percentile["score_50th_percentile"]:
+        return np.array([0,1,0,0])
+    else:
+        return np.array([1,0,0,0])
+    
+def percentile_distribution(moves,df):
+    result = np.zeros(4)
+    for i in range(len(moves)):
+        move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
+        result += in_percentile(move_difference,percentiles(moves_df))
+    return result
+                                
+# Example usage
+move_uci = generate_synthetic_data_dict(10, 1, df,100)
 dataframe = df  # Replace with your actual dataframe if needed
-
-result = evaluate_moves(fen, move_uci, dataframe)
+result = percentile_distribution(move_uci, dataframe)
 print(result)
