@@ -185,7 +185,7 @@ def KL(P,Q):
     Q = np.array(Q)+epsilon
     print(P,Q)
     
-    divergence = np.sum(P*np.log(abs(P/Q)))
+    divergence = abs(np.sum(P*np.log((P/Q))))
     return divergence
                                 
 # Example usage
