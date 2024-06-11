@@ -178,7 +178,7 @@ def ensemble_score(dicts, df):
     return ensemble_scores
 
 def KL(P,Q):
-    epsilon = 0.01
+    epsilon = 0.000001
 
     # You may want to instead make copies to avoid changing the np arrays.
     P = np.array(P)+epsilon
