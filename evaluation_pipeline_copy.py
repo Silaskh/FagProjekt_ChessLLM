@@ -152,9 +152,43 @@ def percentile_distribution(moves,df):
         move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
         result += in_percentile(move_difference,percentiles(moves_df))
     return result
+
+def stockfish_score_function(data, df):
+    stockfish_score = []
+    for i in range(len(data)):
+        move = data[i]
+        fen = df['FEN'][i]
+        move_uci_difference, initial_score, moves_df = evaluate_moves(fen, move, "hej")
+        stockfish_score.append(max(moves_df['score_difference']))
+    return stockfish_score
+
+def dict_to_move(dict):
+    #chose the key with the highest value
+    move = max(dict, key=dict.get)
+    return move
+
+def ensemble_score(dicts, df):
+    #takes a list of dictionaries and returns the average score of the moves
+    ensemble_scores = []
+    for i in range(len(dicts)):
+        fen = df['FEN'][i]
+        move = dict_to_move(dicts[i])
+        move_uci_difference, initial_score, moves_df = evaluate_moves(fen, move, "hej")
+        ensemble_scores.append(move_uci_difference)
+    return ensemble_scores
+
+def KL(P,Q):
+    epsilon = 0.01
+
+    # You may want to instead make copies to avoid changing the np arrays.
+    P = np.array(P)+epsilon
+    Q = np.array(Q)+epsilon
+    
+    divergence = abs(np.sum(P*np.log((P/Q))))
+    return divergence
                                 
 # Example usage
-move_uci = generate_synthetic_data_dict(10, 1, df,100)
-dataframe = df  # Replace with your actual dataframe if needed
-result = percentile_distribution(move_uci, dataframe)
-print(result)
+# move_uci = generate_synthetic_data_dict(10, 1, df,100)
+# dataframe = df  # Replace with your actual dataframe if needed
+# result = percentile_distribution(move_uci, dataframe)
+# print(result)
