@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
 
-def bar_plot(categories, counts, N):
+def bar_plot(categories, counts, N, xlabel, ylabel, title):
     # Create the bar plot
     plt.figure(figsize=(8, 6))
     bars = plt.bar(categories, counts)
@@ -14,9 +14,9 @@ def bar_plot(categories, counts, N):
         height = bar.get_height()
         plt.text(bar.get_x() + bar.get_width() / 2, height, f'{percentage:.2f}%', ha='center', va='bottom')
 
-    plt.xlabel('Percentile')
-    plt.ylabel('Number of Moves')
-    plt.title('Number of moves in each percentile range of the dataset')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
     plt.show()
 
 def distribution_plot(data):
