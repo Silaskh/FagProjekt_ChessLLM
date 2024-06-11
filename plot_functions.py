@@ -3,10 +3,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
 
-def bar_plot(categories, counts, N, xlabel, ylabel, title):
+def bar_plot(categories, counts, N, xlabel, ylabel, title, width=0.5, color='skyblue'):
     # Create the bar plot
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(categories, counts)
+    bars = plt.bar(categories, counts, color=color, width=width)
     
     percentages = [count / N * 100 for count in counts]
     # Add percentage labels on top of each bar
