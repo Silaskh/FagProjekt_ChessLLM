@@ -186,9 +186,14 @@ def KL(P,Q):
     
     divergence = abs(np.sum(P*np.log((P/Q))))
     return divergence
-                                
-# Example usage
-# move_uci = generate_synthetic_data_dict(10, 1, df,100)
-# dataframe = df  # Replace with your actual dataframe if needed
-# result = percentile_distribution(move_uci, dataframe)
-# print(result)
+      
+# Baseline / Random Model
+                          
+def random_model(df, data):
+    random_moves = []
+    for i in range(len(data)):
+        Fen = df['FEN'][i]
+        board = chess.Board(Fen)
+        legal_moves = gen_legal_moves(board,frac=1)
+        random_moves.append(np.random.choice(legal_moves))
+    return random_moves
