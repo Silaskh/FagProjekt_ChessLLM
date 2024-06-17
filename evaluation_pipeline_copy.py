@@ -176,16 +176,6 @@ def ensemble_score(dicts, df):
         move_uci_difference, initial_score, moves_df = evaluate_moves(fen, move, "hej")
         ensemble_scores.append(move_uci_difference)
     return ensemble_scores
-
-def KL(P,Q):
-    epsilon = 0.000001
-
-    # You may want to instead make copies to avoid changing the np arrays.
-    P = np.array(P)+epsilon
-    Q = np.array(Q)+epsilon
-    
-    divergence = abs(np.sum(P*np.log((P/Q))))
-    return divergence
       
 # Baseline / Random Model
                           
