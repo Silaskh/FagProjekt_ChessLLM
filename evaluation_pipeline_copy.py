@@ -187,3 +187,15 @@ def random_model(df, data):
         legal_moves = gen_legal_moves(board,frac=1)
         random_moves.append(np.random.choice(legal_moves))
     return random_moves
+
+
+def percent_legal_moves(data):
+    N = range(len(data))
+    n = 0
+    for i in N:
+        if data[i] == None:
+            n += 0
+        else: 
+            n += 1
+    p = n / N
+    return p
