@@ -1,0 +1,146 @@
+<>:28: SyntaxWarning: invalid escape sequence '\s'
+<>:28: SyntaxWarning: invalid escape sequence '\s'
+C:\Users\Silas Hansen\AppData\Local\Temp\ipykernel_21828\1892579612.py:28: SyntaxWarning: invalid escape sequence '\s'
+  path=("stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe")
+1
+<>:8: SyntaxWarning: invalid escape sequence '\s'
+<>:8: SyntaxWarning: invalid escape sequence '\s'
+C:\Users\Silas Hansen\AppData\Local\Temp\ipykernel_21828\2540220167.py:8: SyntaxWarning: invalid escape sequence '\s'
+  stockfish_path = "stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
+C:\Users\Silas Hansen\AppData\Local\Temp\ipykernel_21828\2540220167.py:8: SyntaxWarning: invalid escape sequence '\s'
+  stockfish_path = "stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In[8], line 7
+      5 llm_moves = generate_synthetic_data_dict(10,1,df)
+      6 llm_moves = [evaluate_move(df['FEN'][i],llm_moves[i]) for i in range(len(llm_moves))]
+----> 7 stockfish_moves = stockfish_score_function(10,df)
+      8 wasserstein_distance(llm_moves,stockfish_moves)
+
+Cell In[7], line 83
+     81 for i in range(N):
+     82     fen = df['FEN'][i]
+---> 83     moves_df = moves_dataframe(fen)
+     84     stockfish_score.append(max(moves_df['score_difference']))
+     85 return stockfish_score
+
+Cell In[7], line 41
+     39 move_differences = []
+     40 for move in legal_moves:
+---> 41     score = evaluate_move(fen, move)
+     42     move_differences.append((move, score))
+     45 # Convert to DataFrame
+
+Cell In[7], line 26
+     24 board = chess.Board(fen)
+     25 board.push(chess.Move.from_uci(move))
+...
+--> 355         waiter.acquire()
+    356         gotit = True
+    357     else:
+
+KeyboardInterrupt: 
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+np.float64(2295.7000000000003)
+Observed Distance: 0.0, p-value: 1.0
+0: b2b4
+1: a7b7
+2: f3g5
+3: e6h6
+4: a6a5
+5: g1h1
+6: a8a7
+7: d5d8
+8: h6g7
+9: b4b2
+10: f7f6
+11: f1h3
+12: b3d3
+13: c3e4
+14: h4h3
+15: c5a6
+16: d1d4
+17: d3b5
+18: h2h4
+19: e4c6
+20: g5e6
+21: f2h3
+22: a3a4
+23: c1c3
+24: h8g8
+25: a1a8
+26: d8c8
+27: d3c3
+28: h8g8
+29: g7g5
+30: d4d1
+31: e3a3
+32: f5f4
+33: e7e8
+34: e2g3
+35: d4c3
+36: a8f3
+37: e6g8
+38: d8a8
+39: d7e5
+40: b1d1
+41: d6d8
+42: f7f6
+43: e8d7
+44: h1h3
+45: a7e3
+46: e3b6
+47: c3a1
+48: b7c8
+49: d7c8
+50: b4f8
+51: f8f7
+52: f6c3
+53: c5b6
+54: g2f1
+55: f6h5
+56: c8f8
+57: d8d7
+58: c2b1
+59: f1e1
+60: g6h6
+61: g7f6
+62: g8h8
+63: d6c5
+64: d8d7
+65: f8e8
+66: c3c4
+67: d5f4
+68: c5d5
+69: c1b2
+70: f7f5
+71: d5d6
+72: e7f8
+73: g8h8
+74: e8f8
+75: f5e5
+76: d1c2
+77: c1d3
+78: h1g2
+79: f3g1
+80: a6b4
+81: a8h8
+82: d3h3
+83: d4h4
+84: c4a3
+85: a6a8
+86: d6e7
+87: f4e3
+88: e4d6
+89: f3f4
+90: e3c1
+91: g8h8
+92: h1h2
+93: e8f7
+94: f3d4
+95: g8h8
+96: d8e8
+97: f8g8
+98: e8e4
+99: g5g6
+100: f6d7
