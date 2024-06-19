@@ -3,20 +3,31 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
 
-def bar_plot(categories, counts, N, xlabel, ylabel, title, width=0.5, color='skyblue'):
-    # Create the bar plot
-    plt.figure(figsize=(8, 6))
-    bars = plt.bar(categories, counts, color=color, width=width)
+def bar_plot(categories, p1, p2, N, xlabel="Percentage of legal moves given", ylabel="Number of legal moves taken", title="Number of legal moves", label1 = "Llama2", label2="Llama3", width=0.4, color1= "teal", color2="turquoise"):
+    # Calculate positions of bars
+    bar_width = width / 2
+    positions1 = [i - bar_width for i in range(len(categories))]
+    positions2 = [i + bar_width for i in range(len(categories))]
     
-    percentages = [count / N * 100 for count in counts]
+    # Create the bar plot
+    plt.figure(figsize=(10, 6))
+    bars1 = plt.bar(positions1, [p*N for p in p1], color=color1, width=width, label=label1)
+    bars2 = plt.bar(positions2, [p*N for p in p2], color=color2, width=width, label=label2)
+    
     # Add percentage labels on top of each bar
-    for bar, percentage in zip(bars, percentages):
-        height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width() / 2, height, f'{percentage:.2f}%', ha='center', va='bottom')
+    for bar1, p1_value in zip(bars1, p1):
+        height = bar1.get_height()
+        plt.text(bar1.get_x() + bar1.get_width() / 2, height, f'{p1_value:.2f}%', ha='center', va='bottom')
+    
+    for bar2, p2_value in zip(bars2, p2):
+        height = bar2.get_height()
+        plt.text(bar2.get_x() + bar2.get_width() / 2, height, f'{p2_value:.2f}%', ha='center', va='bottom')
 
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.title(title)
+    plt.xticks(range(len(categories)), categories)
+    plt.legend()
     plt.show()
 
 def distribution_plot(data1, data2=None, label1='Data 1', label2='Data 2', xlabel='Scores', ylabel='Probability Density', title='Non-Parametric Probability Distribution (KDE)', color1='skyblue', color2='pink'):
