@@ -150,7 +150,7 @@ def percentile_distribution(moves,df):
     result = np.zeros(4)
     for i in range(len(moves)):
         if moves[i] == None:
-            pass
+            continue
         else:
             move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
             result += in_percentile(move_difference,percentiles(moves_df))
