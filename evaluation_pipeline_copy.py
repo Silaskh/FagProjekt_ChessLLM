@@ -226,6 +226,41 @@ def get_ensemble_output_dict():
             moves.append(dict)
     return moves
 
+def get_ensemble_output_dict_varried_size(N):
+    moves = []
+    with open("ensemble_output.txt", "r") as file:
+        for line in file:
+            # Remove everything before the first : and the space after
+            line = line[line.find(':')+1:]
+            # Remove the newline character
+            line = line[:-1]
+            # Split the line at all the commas
+            line = line.split(',')
+            dict = {}
+            if len(line) <= N:
+                for element in line:
+                    if element in dict:
+                        dict[element] += 1
+                    else:
+                        dict[element] = 1  
+            else:
+                for i in range(N):
+                    if line[i] in dict:
+                        dict[line[i]] += 1
+                    else:
+                        dict[line[i]] = 1
+            moves.append(dict)
+    return moves
+
+def get_ensemble_output_varried_size(N):
+    d_moves = get_ensemble_output_dict_varried_size(N)
+    moves = []
+    #Loop through all dicts in moves, append the key with the highest value to moves_played
+    for dict in d_moves:
+        max_key = max(dict, key=dict.get)
+        moves.append(max_key)
+    return moves
+
 def get_ensemble_output():
     d_moves = get_ensemble_output_dict()
     moves = []
