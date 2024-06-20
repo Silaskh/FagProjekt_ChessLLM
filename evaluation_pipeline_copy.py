@@ -264,7 +264,6 @@ def get_ensemble_output():
     for dict in d_moves:
         max_key = max(dict, key=dict.get)
         moves.append(max_key)
-    moves = remove_illegal(moves, df)
     return moves
 
 def remove_illegal(moves, df):
