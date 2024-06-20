@@ -35,7 +35,6 @@
 34: e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,c1b2,b5c6,b5c6,c1b2,c1b2
 35: g4g5,g4g5,g4g5,g4g5,g4g5,d1c1,g4g5,g4g5,d1c1,d1c1,d1c1,d1c1,d1c1,d1b1,d1b1,g4g5,g4g5, ,g4g5,g4g5
 36: h5h4,h5h4,h5h4,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5
-37: e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8
 38: d6d5,e6e5,d6d5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5
 39: d7f8,d7f6,d7f8,d7f6,d7f8,d7f8,d7f8,d7f8,d7f6,d7f6,d7f6,d7f6,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8
 40: d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,b1b4,d4e5,d4e5,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4
