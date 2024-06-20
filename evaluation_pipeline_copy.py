@@ -149,8 +149,11 @@ def in_percentile(score,percentile):
 def percentile_distribution(moves,df):
     result = np.zeros(4)
     for i in range(len(moves)):
-        move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
-        result += in_percentile(move_difference,percentiles(moves_df))
+        if moves[i] == None:
+            continue
+        else:
+            move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
+            result += in_percentile(move_difference,percentiles(moves_df))
     return result
 
 def stockfish_score_function(data, df):
@@ -189,12 +192,12 @@ def random_model(df, data):
     return random_moves
 
 def percentage(data):
-    N = len(data)
+    N = 101
     n = 0
     with open(data) as f:
         for line in f:
             inx, move = line.split(":")
-            if move is not None:
+            if move != " None\n":
                 n += 1
     return n/N
 
@@ -203,3 +206,13 @@ def p_list(list):
     for i in range(len(list)):
         p.append(percentage(list[i]))
     return p
+
+def get_moves(data):
+    moves = []
+    with open(data) as f:
+        for line in f:
+            inx, move = line.split(":")
+            if move != " None\n":
+                move = move[1:-1]
+                moves.append(move)
+    return moves
