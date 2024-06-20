@@ -206,3 +206,31 @@ def get_moves(data):
                 move = move[1:-1]
                 moves.append(move)
     return moves
+
+def get_ensemble_output_dict():
+    moves = []
+    with open("ensemble_output.txt", "r") as file:
+        for line in file:
+            #Remove the everything before the first : and the space after
+            line = line[line.find(':')+1:]
+            #Remove the newline character
+            line = line[:-1]
+            #Split the line at all the commas
+            line = line.split(',')
+            dict = {}
+            for element in line:
+                if element in dict:
+                    dict[element] += 1
+                else:
+                    dict[element] = 1
+            moves.append(dict)
+    return moves
+
+def get_ensemble_output():
+    d_moves = get_ensemble_output_dict()
+    moves = []
+    #Loop through all dicts in moves, append the key with the highest value to moves_played
+    for dict in d_moves:
+        max_key = max(dict, key=dict.get)
+        moves.append(max_key)
+    return moves
