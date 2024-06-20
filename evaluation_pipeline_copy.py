@@ -69,60 +69,51 @@ def amount_index_zero(l,df):
             amount += 1
     return amount
 
-def evaluate_moves(fen, move_uci, dataframe):
-     # Path to Stockfish executable
-    stockfish_path = r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
+def evaluate_move(fen,move):
+    # Path to Stockfish executable
+    stockfish_path = "stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
     
-    # Load Stockfish engine
     with chess.engine.SimpleEngine.popen_uci(stockfish_path) as engine:
-        engine.configure({"Threads": 1})  # Configure Stockfish to run in single-threaded mode for consistency
-        
+        engine.configure({"Threads": 8})  # Increased number of threads for stability
         # Create a chess board from FEN
         board = chess.Board(fen)
-        
         # Determine which player is to move
         is_white_to_move = board.turn == chess.WHITE
-        
         # Evaluate the initial position
-        initial_info = engine.analyse(board, chess.engine.Limit(time=1.0))  # Increased time limit for stability
+        initial_info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
         initial_score = initial_info["score"].white().score(mate_score=10000)  # Get the POV score for White
         
         # If it's Black to move, invert the score
         if not is_white_to_move:
             initial_score = -initial_score
         
-        # Generate all legal moves
-        legal_moves = list(board.legal_moves)
-
         board = chess.Board(fen)
-        board.push(chess.Move.from_uci(move_uci))
+        board.push(chess.Move.from_uci(move))
         info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
         move_score_uci = info["score"].white().score(mate_score=10000)  # Get the POV score for White
         # If it's Black to move, invert the score
         if not is_white_to_move:
             move_score_uci = -move_score_uci
-        move_uci_difference = move_score_uci - initial_score
-        
-        # Evaluate all legal moves
-        move_differences = []
-        for move in legal_moves:
-            board = chess.Board(fen)
-            board.push(move)
-            info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
-            move_score = info["score"].white().score(mate_score=10000)  # Get the POV score for White
-            # If it's Black to move, invert the score
-            if not is_white_to_move:
-                move_score = -move_score
-            difference = move_score - initial_score
-            move_differences.append((move.uci(), difference))
-            board.pop()
-        
-        # Convert to DataFrame
-        moves_df = pd.DataFrame(move_differences, columns=['move', 'score_difference'])
-        moves_df.head()
 
-       
-        return move_uci_difference,initial_score, moves_df
+        if initial_score == 0:
+            initial_score += 0.000001
+        
+        relative_move_difference = (move_score_uci - initial_score)/initial_score
+        return relative_move_difference
+
+def moves_dataframe(fen):   
+    legal_moves = gen_legal_moves(chess.Board(fen))
+        
+    # Evaluate all legal moves
+    move_differences = []
+    for move in legal_moves:
+        score = evaluate_move(fen, move)
+        move_differences.append((move, score))
+        
+    
+    # Convert to DataFrame
+    moves_df = pd.DataFrame(move_differences, columns=['move', 'score_difference'])   
+    return moves_df
         
 
 def percentiles(moves_df):
@@ -152,16 +143,15 @@ def percentile_distribution(moves,df):
         if moves[i] == None:
             continue
         else:
-            move_difference, inital_score, moves_df = evaluate_moves(df['FEN'][i], moves[i], df)
-            result += in_percentile(move_difference,percentiles(moves_df))
+            relative_move_difference = evaluate_move(df['FEN'][i], moves[i], df)
+            moves_df = moves_dataframe(df['FEN'][i])
+            result += in_percentile(relative_move_difference,percentiles(moves_df))
     return result
 
 def stockfish_score_function(data, df):
     stockfish_score = []
     for i in range(len(data)):
-        move = data[i]
-        fen = df['FEN'][i]
-        move_uci_difference, initial_score, moves_df = evaluate_moves(fen, move, "hej")
+        moves_df = moves_dataframe(df['FEN'][i])
         stockfish_score.append(max(moves_df['score_difference']))
     return stockfish_score
 
@@ -176,8 +166,8 @@ def ensemble_score(dicts, df):
     for i in range(len(dicts)):
         fen = df['FEN'][i]
         move = dict_to_move(dicts[i])
-        move_uci_difference, initial_score, moves_df = evaluate_moves(fen, move, "hej")
-        ensemble_scores.append(move_uci_difference)
+        relative_move_difference = evaluate_move(fen, move)
+        ensemble_scores.append(relative_move_difference)
     return ensemble_scores
       
 # Baseline / Random Model
@@ -215,4 +205,32 @@ def get_moves(data):
             if move != " None\n":
                 move = move[1:-1]
                 moves.append(move)
+    return moves
+
+def get_ensemble_output_dict():
+    moves = []
+    with open("ensemble_output.txt", "r") as file:
+        for line in file:
+            #Remove the everything before the first : and the space after
+            line = line[line.find(':')+1:]
+            #Remove the newline character
+            line = line[:-1]
+            #Split the line at all the commas
+            line = line.split(',')
+            dict = {}
+            for element in line:
+                if element in dict:
+                    dict[element] += 1
+                else:
+                    dict[element] = 1
+            moves.append(dict)
+    return moves
+
+def get_ensemble_output():
+    d_moves = get_ensemble_output_dict()
+    moves = []
+    #Loop through all dicts in moves, append the key with the highest value to moves_played
+    for dict in d_moves:
+        max_key = max(dict, key=dict.get)
+        moves.append(max_key)
     return moves
