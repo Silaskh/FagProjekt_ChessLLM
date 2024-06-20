@@ -246,7 +246,8 @@ def get_ensemble_output_dict_varried_size(N):
                     else:
                         dict[line[i]] = 1
             moves.append(dict)
-    return moves
+            
+    return remove_illegal(moves)
 
 def get_ensemble_output_varried_size(N):
     d_moves = get_ensemble_output_dict_varried_size(N)
@@ -307,4 +308,4 @@ def get_ensemble_output_varried_size(N):
     for dict in d_moves:
         max_key = max(dict, key=dict.get)
         moves.append(max_key)
-    return moves
+    return remove_illegal(moves,df)
