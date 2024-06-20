@@ -43,14 +43,6 @@ def generate_synthetic_data_single(N,seed,df):
 
 path=(r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe")
 
-def evaluate_move(board, move, path):
-    #Evaluates the move before move and after move return the difference
-    board1 = board.copy()
-    board1.push(chess.Move.from_uci(move))
-    board2 = board.copy()
-    #Return differnce of board1 and board2
-
-
 def amount_legal_moves_taken(l , df):
     amount = 0
     for i in range(len(l)):
@@ -71,7 +63,7 @@ def amount_index_zero(l,df):
 
 def evaluate_move(fen,move):
     # Path to Stockfish executable
-    stockfish_path = "stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
+    stockfish_path = r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
     
     with chess.engine.SimpleEngine.popen_uci(stockfish_path) as engine:
         engine.configure({"Threads": 8})  # Increased number of threads for stability
@@ -98,7 +90,7 @@ def evaluate_move(fen,move):
         if initial_score == 0:
             initial_score += 0.000001
         
-        relative_move_difference = (move_score_uci - initial_score)/initial_score
+        relative_move_difference = (move_score_uci - initial_score)
         return relative_move_difference
 
 def moves_dataframe(fen):   
@@ -143,14 +135,14 @@ def percentile_distribution(moves,df):
         if moves[i] == None:
             continue
         else:
-            relative_move_difference = evaluate_move(df['FEN'][i], moves[i], df)
+            relative_move_difference = evaluate_move(df['FEN'][i], moves[i])
             moves_df = moves_dataframe(df['FEN'][i])
             result += in_percentile(relative_move_difference,percentiles(moves_df))
     return result
 
-def stockfish_score_function(data, df):
+def stockfish_score_function(N, df):
     stockfish_score = []
-    for i in range(len(data)):
+    for i in range(N):
         moves_df = moves_dataframe(df['FEN'][i])
         stockfish_score.append(max(moves_df['score_difference']))
     return stockfish_score
@@ -160,15 +152,16 @@ def dict_to_move(dict):
     move = max(dict, key=dict.get)
     return move
 
-def ensemble_score(dicts, df):
+def score(data, df):
     #takes a list of dictionaries and returns the average score of the moves
-    ensemble_scores = []
-    for i in range(len(dicts)):
+    scores = []
+    for i in range(len(data)):
         fen = df['FEN'][i]
-        move = dict_to_move(dicts[i])
-        relative_move_difference = evaluate_move(fen, move)
-        ensemble_scores.append(relative_move_difference)
-    return ensemble_scores
+        move = data[i]
+        if move != None:
+            relative_move_difference = evaluate_move(fen, move)
+            scores.append(relative_move_difference)
+    return scores
       
 # Baseline / Random Model
                           
@@ -226,6 +219,14 @@ def get_ensemble_output_dict():
             moves.append(dict)
     return moves
 
+def remove_illegal(moves, df):
+    for i in range(len(moves)):
+        board = chess.Board(df['FEN'][i])
+        legal_moves = gen_legal_moves(board)
+        if moves[i] not in legal_moves:
+            moves[i] = None
+    return moves
+
 def get_ensemble_output():
     d_moves = get_ensemble_output_dict()
     moves = []
@@ -233,4 +234,5 @@ def get_ensemble_output():
     for dict in d_moves:
         max_key = max(dict, key=dict.get)
         moves.append(max_key)
+    moves = remove_illegal(moves, df)
     return moves
