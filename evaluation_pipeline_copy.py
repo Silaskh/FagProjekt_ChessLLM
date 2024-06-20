@@ -61,57 +61,55 @@ def amount_index_zero(l,df):
             amount += 1
     return amount
 
-def evaluate_move(fen,move):
-    # Path to Stockfish executable
+def evaluate_moves(fen, move, elo=1350):
     stockfish_path = r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe"
-    
     with chess.engine.SimpleEngine.popen_uci(stockfish_path) as engine:
-        engine.configure({"Threads": 8})  # Increased number of threads for stability
+        engine.configure({"Threads": 8,"UCI_LimitStrength": True, "UCI_Elo": elo})  # Increased number of threads for stability
         # Create a chess board from FEN
         board = chess.Board(fen)
         # Determine which player is to move
         is_white_to_move = board.turn == chess.WHITE
-        # Evaluate the initial position
-        initial_info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
-        initial_score = initial_info["score"].white().score(mate_score=10000)  # Get the POV score for White
-        
-        # If it's Black to move, invert the score
-        if not is_white_to_move:
-            initial_score = -initial_score
         
         board = chess.Board(fen)
         board.push(chess.Move.from_uci(move))
         info = engine.analyse(board, chess.engine.Limit(time=0.1))  # Increased time limit for stability
-        move_score_uci = info["score"].white().score(mate_score=10000)  # Get the POV score for White
+        move_score= info["score"].white().score(mate_score=10000)  # Get the POV score for White
         # If it's Black to move, invert the score
         if not is_white_to_move:
-            move_score_uci = -move_score_uci
+            move_score = -move_score
+    return move_score
 
-        if initial_score == 0:
-            initial_score += 0.000001
-        
-        relative_move_difference = (move_score_uci - initial_score)
-        return relative_move_difference
-
-def moves_dataframe(fen):   
+def moves_dataframe(fen, elo=1350):   
     legal_moves = gen_legal_moves(chess.Board(fen))
         
     # Evaluate all legal moves
-    move_differences = []
+    move_score = []
     for move in legal_moves:
-        score = evaluate_move(fen, move)
-        move_differences.append((move, score))
+        score = evaluate_moves(fen, move, elo=elo)
+        move_score.append((move, score))
         
     
     # Convert to DataFrame
-    moves_df = pd.DataFrame(move_differences, columns=['move', 'score_difference'])   
+    moves_df = pd.DataFrame(move_score, columns=['move', 'move_score'])   
     return moves_df
+
+
+def move_difference(data, df, elo=1350):
+    score_difference = []
+    moves_df_list = []
+    for i in range(len(data)):
+        moves_df = moves_dataframe(df['FEN'][i], elo=elo)
+        moves_df_list.append(moves_df)
+        move_score = moves_df['move_score'][moves_df['move'] == data[i]].values[0]
+        stockfish_score = max(moves_df['move_score'])
+        score_difference.append(stockfish_score-move_score)
+    return moves_df_list, score_difference
         
 
 def percentiles(moves_df):
-        score_75th_percentile = np.percentile(moves_df['score_difference'], 75)
-        score_25th_percentile = np.percentile(moves_df['score_difference'], 25)
-        score_50th_percentile = np.percentile(moves_df['score_difference'], 50)
+        score_75th_percentile = np.percentile(moves_df['move_score'], 75)
+        score_25th_percentile = np.percentile(moves_df['move_score'], 25)
+        score_50th_percentile = np.percentile(moves_df['move_score'], 50)
         # Return results
         result = {
             "score_75th_percentile": score_75th_percentile,
@@ -129,50 +127,47 @@ def in_percentile(score,percentile):
     else:
         return np.array([1,0,0,0])
     
-def percentile_distribution(moves,df):
+def percentile_distribution(moves, df, elo=1350):
     result = np.zeros(4)
-    for i in range(len(moves)):
-        if moves[i] == None:
-            continue
-        else:
-            relative_move_difference = evaluate_move(df['FEN'][i], moves[i])
-            moves_df = moves_dataframe(df['FEN'][i])
-            result += in_percentile(relative_move_difference,percentiles(moves_df))
+    moves_df_list, score_difference = move_difference(moves, df, elo=elo)
+    for i in range(len(score_difference)):
+        percentile = percentiles(moves_df_list[i])
+        result += in_percentile(score_difference[i],percentile)
     return result
 
-def stockfish_score_function(N, df):
-    stockfish_score = []
-    for i in range(N):
-        moves_df = moves_dataframe(df['FEN'][i])
-        stockfish_score.append(max(moves_df['score_difference']))
-    return stockfish_score
+# def stockfish_score_function(N, df,elo=1350):
+#     stockfish_score = []
+#     for i in range(N):
+#         moves_df = moves_dataframe(df['FEN'][i],elo=elo)
+#         stockfish_score.append(max(moves_df['move_score']))
+#     return stockfish_score
 
-def dict_to_move(dict):
-    #chose the key with the highest value
-    move = max(dict, key=dict.get)
-    return move
+# def dict_to_move(dict):
+#     #chose the key with the highest value
+#     move = max(dict, key=dict.get)
+#     return move
 
-def score(data, df):
-    #takes a list of dictionaries and returns the average score of the moves
-    scores = []
-    for i in range(len(data)):
-        fen = df['FEN'][i]
-        move = data[i]
-        if move != None:
-            relative_move_difference = evaluate_move(fen, move)
-            scores.append(relative_move_difference)
-    return scores
+# def score(data, df, elo=1350):
+#     #takes a list of dictionaries and returns the average score of the moves
+#     scores = []
+#     for i in range(len(data)):
+#         fen = df['FEN'][i]
+#         move = data[i]
+#         if move != None:
+#             relative_move_difference = evaluate_move(fen, move, elo=elo)
+#             scores.append(relative_move_difference)
+#     return scores
       
 # Baseline / Random Model
                           
-def random_model(df, data):
-    random_moves = []
-    for i in range(len(data)):
-        Fen = df['FEN'][i]
-        board = chess.Board(Fen)
-        legal_moves = gen_legal_moves(board,frac=1)
-        random_moves.append(np.random.choice(legal_moves))
-    return random_moves
+# def random_model(df, data):
+#     random_moves = []
+#     for i in range(len(data)):
+#         Fen = df['FEN'][i]
+#         board = chess.Board(Fen)
+#         legal_moves = gen_legal_moves(board,frac=1)
+#         random_moves.append(np.random.choice(legal_moves))
+#     return random_moves
 
 def percentage(data):
     N = 101
