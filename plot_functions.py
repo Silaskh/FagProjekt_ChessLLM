@@ -92,6 +92,18 @@ def distribution_plot(data_dict, xlabel='Scores', ylabel='Probability Density', 
     plt.legend()
     plt.show()
 
+# Example usage
+# data1 = np.random.normal(0, 1, 10000)
+# data2 = np.random.normal(1, 1, 10000)
+# data3 = np.random.normal(2, 1, 10000)
+
+# data_dict = {
+#     'Data 1': data1,
+#     'Data 2': data2,
+#     'Data 3': data3
+# }
+
+# distribution_plot(data_dict)
 
 
     
