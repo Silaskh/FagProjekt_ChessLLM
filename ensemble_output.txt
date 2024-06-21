@@ -1,120 +1,119 @@
-0: f3g5,c4e6,c4d5,c4d5,c4d5,c4e6,f3g5,f3g5,c4d5,f3g5,e3e4,c4d5,c4d5,c4d5,c4d5,c4e6,c4d5,c4d5,c4d5,c4d5
-1: a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8
-2: e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5
-3: e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8
-4: e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8
-5: b5c6,b5c6,b5d7,b5c6,b5c6,b5d7,b5c6,b5c6,b5d7,b5d7,b5c6,b5c6,b5d7,b5c6,b5c6,f3f5,b5c6,b5c6,f3f5,f3f5
-6: d7e5,d7c5,d7b6,d7c5,d7c5,d7e5,d7c5,d7c5,d7b6,d7e5,d7c5,d7e5,d7e5,d7c5,d7c5,d7c5,d7c5,d7c5,d7e5,d7c5
-7: d5e6,d5e6,d5d6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6
-8: g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7
-9: b4f8,e4f5,e4f5,b4e7,e4f5,e4f5,e4f5,e4f5,b4f8,e4f5,g1h1,g1h1,g1h1,e4f5,g1h1,g1h1,e4f5,b4f8,b4e7,e4f5
-10: g4e5,g4h6,g4h6,g4h6,g4h6,g4h6,g4e5,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6
-11: f1b5,f1c4,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1b5,f1c4,f1c4,f1b5
-12: b3d5,b3d5,b3d5,b3d5,b3f7,b3d5,b3d5,e2d1,b3d5,b3d5,b3d5,e2d1,b3d5,b3d5,b3d5,b3f7,b3d5,b3d5,b3c4,b3d5
-13: d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6
-14: c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,h4g4,h4h5,c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,h4h5,c6d7,c6d7,c6d7,c6d7
-15: g8h8,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7
-16: d1d6,d1d6,d1d5,d1d6,d1d6,d1d5,d1d6,d1d5,d1d6,d1d6,d1d2,d1d6,d1d6,d1d5,d1d2,d1d2,d1d5,d1d5,d1d2,d1d5
-17: d3e3,d3e2,d3e2,d3e2,d3e2,d3e3,d3e3,e1e2,d3e2,d3e2,d3e2,d3e2,d3e2,e1e2,e1e2,d3e3,e1e2,d3e2,d3e2,d3e2
-18: e5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,e5e6,d5e6,d5e6
-19: e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5
-20: g5h3,g5h7,g5h7,g5h7,g5h3,g5h7,g5h7,d1d5,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,d1d5,g5h7,g5h7,d1d5
-21: e3f4,e3f4,e3c5,e3f4,e3c5,e3c5,e3d4,e3d4,e3d4,e3d4,e3d4,e3d4,e3d4,e3f4,e3d4,e3c5,e3d4,e3c5,e3d4,e3c5
-22: e2g3,e2f4,e2g3,e2f4,e2f4,d3e3,e2f4,e2g3,e2f4,e2f4,e2f4,e2f4,e2f4,e2f4,e2g3,d3e3,e2g3,e2f4,e2g3,e2f4
-23: d2e4,d2e4,d2e4,d2e4,d2e4,h1g1,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4
-24: f8e7,f8e7,d8e7,f8e7,d8e7,d8e7,d8e7,d8e7,f8e7,f8e7,f8e7,f8e7,d8e7,d8e7,f8e7,f8e7,f8e7,f8e7,f8e7,f8e7
-25: b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,g4g5,b2c3,b2c3,b2c3,b2c3
-26: e7f8,e5d4,e5d4,e7f8,e5f6,e7f8,e5f5,e5f6,e7f8,e5d4,e7f8,e5d5,e7f8,e7f8,e5d4,e5d4,e5f6,h8g8,e7f8,e5f6
-27: c5e6,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,d3d5,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7
-28: f8g8, , ,f8e8,f8g8,f8e8,c5e7,c5e7,f8e8,f8e8, ,f8g8,c5e7,h8g8,f8g8,h8g7, ,f8g8,f8e8,h8g7
-29: e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8
-30: e3g5,d4d8,d4d5,e3g5,e3g5,d4d8,d4d8,d4d5,e3g5,d4d8,d4d8,d4d8,d4d8,e3g5,d4d8,e3g5,e3g5,e3g5,d4d5,d4d7
-31: f6e7,g8h8,f6e7,g8h8,e3e8,g7h8,g8f8,f6e7,f6e7,f6e7,g8f8,g8h8,g7h8,f6e7,g8h8,g8h8,g8h8,f6e7,g8f8,g8h8
-32: f5g4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5f4,f5f4,f5g4,f5g4,f5g4,f5g4,f5f4,f5f4
-33: e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7c7,e7c7,e7c7,e7a7,e7a7,e7a7,e7a7,e7b7,e7b7,e7b7,e7b7,e7b7
-34: e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,c1b2,b5c6,b5c6,c1b2,c1b2
-35: g4g5,g4g5,g4g5,g4g5,g4g5,d1c1,g4g5,g4g5,d1c1,d1c1,d1c1,d1c1,d1c1,d1b1,d1b1,g4g5,g4g5, ,g4g5,g4g5
-36: h5h4,h5h4,h5h4,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5
-38: d6d5,e6e5,d6d5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5
-39: d7f8,d7f6,d7f8,d7f6,d7f8,d7f8,d7f8,d7f8,d7f6,d7f6,d7f6,d7f6,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8
-40: d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,b1b4,d4e5,d4e5,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4
-41: b6c8,b6c8,b6c8,b6c8,b6c8,b6c8,b6a8,b6a8,b6a8,b6a8,b6a8,b6a8,b6a8,b6d7,b6d7,b6d7,b6d7,b6d7,b6d7,b6d7
-42: g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4
-43: f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,e6d7,e6d7,f6d7,e6d7,e6d7,e6d7,e6d7,e6g4, ,e6d7,e6d7
-44: h1e1,h1e1,h1e1,h1e1,h1e1,h1e1,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3
-45: a7b6,a7b6,a7b6,a7b6,a6a5,a6a5,a6a5,a6a5,a6a5,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,a7b6,a7b6,a7b6
-46: d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,h3h4,d3d4,d3d4
-47: c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5
-48: d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,e8e4,e8e4,e8e4,e8e4,e8e4,e8e4,e8e4
-49: d6d5,d6d5,d6d5,d6d5,d6d5,d6d5,a7a6,a7a6,a7a6,a7a6,d6d5,d6d5,d6d5,d6d5,d6d5,d6d5,a7a5,a7a5,a7a5,a7a5
-50: b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4
-51: e6e5,e6e5,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5
-52: a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8
-53: g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,a1f1,a1f1,a1f1,a1f1,f2f4
-54: a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,c1d2,c1d2,c1d2
-55: c1d2,c1d2,c1d2,c1d2,c1d2,c1d2,c1d2,c1d2,c7d7,c7d7,c7d7,c7d7,c7d7,c7d7,c7d7,c7d7,c7b8,c7b8,c7b8,c7b8
-56: b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7b2,b7b2,b7b2,b7b2,b7b2,b7b2,b7h1,b7h1
-57: f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4, , ,d8g8,d8g8,d8f8,d8f8,d8e8,d8d4
-58: c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6
-59: h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f2,h3f2,h3f2,h3f2,h3g1,h3g1,h3g1,h3g1,h3g5,h3g5,h3g5
-60: g6f6,g6f6,g6f6,g6f6,g6f6,g6f7,g6f7,g6f7,g6f7,g6f7,g6f7,g6f6,g6f6,g6f6,g6f6,g6f6,g6f7,g6f7,g6f7,g6f7
-61: h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,g5g4,g5g4,g5g4
-62: e6a6,e6a6,e6a6,e6a6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6
-63: h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5
-64: e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,g8h8,g8h8,g8h8,g8h8
-65: b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5d7,b5d7,b5d7,b5a6,b5a6,b5d7,b5d7,b5d7
-66: b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,a2a4,f1a1,f1a1,f1a1,f1a1
-67: f3g4,f3g4,f3g4,f3g4,f3g4,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1
-68: h6h5,h6h5,h6h5,h6h5,c5d5,c5d5,c5d5,c5d5,c5d5,c5d5,c5d5,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b
-69: f1d2,f1d2,f1d2,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1e3,c1e3,c1e3,c1e3,c1e3
-70: c8b7,c8b7,c8b7,c8a6,c8a6,c8a6,c8a6,c8b7,c8b7,c8b7,c8b7,c8b7c8b7,c8b7,c8a6,c8a6,c8a6,c8a6,c8b7,c8b7
-71: e2c1,e2c1,e2c1,e2c1,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2
-72: a7d4,a7d4,a7d4,a7d4,a7d4,a7d4,e7e6,e7e6,e7e6,e7e6,e7e6,a7b6,a7b6,a7b6, , ,a7b8,a7b8,a7b8,a7b8
-73: e4e8,e4e8,e4e8,e4e8,e4e8,e4e8,e4e8,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,g8g3,g8g3,g8g3,g8g3
-74: d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,h6h5
-75: a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5
-76: c3b5,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,c3b5
-77: d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2
-78: e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3g5,e3g5,e3h6,e3h6,e3h6,e3h6,e3g5,e3g5, ,
-79: e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1
-80: f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,e7d7,e7d7,e7d7,e7d7,e7d7,e7d7,a6c7,a6c7,a6c7,a6c7
-81: a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,d7f7,d7f7,d7f7,d7f7,d7f7
-82: d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,f4h3,f4h3,f4h3,f4h3
-83: c6c1,c6c1,c6c1,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c1,c6c1,c6c1
-84: g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1f2,g1f2,g1f2,g1f2,g1f2,g1f2,g1f1,g1h1,g1h1,g1h1,g1h1,g1h1
-85: a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6b6,a6b6,a6b6
-86: e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e7,e6e7,e6e7,e6e7,e6e7,e6e8
-87: c3d4,c3d4,c3d4,c3d4,c3c4,c3c4,c3c4, ,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4
-88: b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1f1,b1f1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1
-89: d2e2,d2e2,d2e2,d2c2,d2c2,d2c2,d2b2,d2b2,d2b2,d2b2,d2b2,d2b2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2
-90: d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1e1,d1e1,d1e1,d1e1,b2b3,b2b3,d1c1,d1c1,d1c1
-91: f6e8,f6e8,f6e8,f6e8,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5
-92: h1h2,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2, ,h1h2,h1h2,h1h2,h1h2, ,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2
-93: e8f7,e8f7,e8f7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,
-94: d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1c2
-95: d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5f6
-96: d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,f8e8
-97: e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4
-98: e8d8,e8d8,e8d8,e8d8,e8d8,e8d8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8
-99: f5h3,f5h3, ,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f3e5,f3e5,f3e5,f3e5,f3e5
-100: d8d7,d8d7,d8d7,d8d7,d8d7,f6d7,f6d7,f6d7,f6d7,d8d7,d8d7,d8d7,d8d7,d8d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7
-101: d8d4,d8d4,c8d7,d8d4,d8d4,d8d4,c8d7,d8d4,c8d7,c8d7,d8d4,d8d4,d8d4,d8d4,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7
-102: d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2'
-103: c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6a6,c6a6
-104: e2f4,e2f4,e2f4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2f4,e2d4
-105: c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8b7,c8b7,c8b7, ,c8b7,c8b7,c8b7,c8b7,c8e6,c8d7,c8d7,c8d7,c8d7,c8d7
-106: d3f3,d3e3,d3e3,d3e3,d3e3,d3e3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3e3,d3e3,d3e3,d3e3,d3c4
-107: d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7b5
-108: f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1
-109: d3c4,d3c4,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3c4,d3c4
-110: a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8c8
-111: d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8e8
-112: d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,f1e1,f1e1,f1e1,f1e1,f1e1
-113: d8g8,d8g8,d8f8,d8f8,d8f8,d8f8,d8f8,d8f8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8
-114: d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3f1,d3f1,d3f1,d3f1,d3f1,d3b1,d3b1,d3b1,d3b1,d3b1,d3c2
-115: c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6a8,c6a8,c6a8,c6a8,c6a8,c6a8,c6b7
-116: e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7d7,e7d7,e7d7,e7d7
-117: g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7g8,g7g8,g7g8,g7g8,g7g8,g7g8
-118: d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8d7,d8d7
-119: a8e8,a8e8,a8e8,a8e8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8d8,a8d8,a8f8,a8d8
-120: b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8c7,b8c7,b8c7,b8c7,b8c7,b8c7
+0:f3g5,c4e6,c4d5,c4d5,c4d5,c4e6,f3g5,f3g5,c4d5,f3g5,e3e4,c4d5,c4d5,c4d5,c4d5,c4e6,c4d5,c4d5,c4d5,c4d5
+1:a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8,a7a8
+2:e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5,e3g5
+3:e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8,e6e8
+4:e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8
+5:b5c6,b5c6,b5d7,b5c6,b5c6,b5d7,b5c6,b5c6,b5d7,b5d7,b5c6,b5c6,b5d7,b5c6,b5c6,f3f5,b5c6,b5c6,f3f5,f3f5
+6:d7e5,d7c5,d7b6,d7c5,d7c5,d7e5,d7c5,d7c5,d7b6,d7e5,d7c5,d7e5,d7e5,d7c5,d7c5,d7c5,d7c5,d7c5,d7e5,d7c5
+7:d5e6,d5e6,d5d6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6
+8:g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7
+9:b4f8,e4f5,e4f5,b4e7,e4f5,e4f5,e4f5,e4f5,b4f8,e4f5,g1h1,g1h1,g1h1,e4f5,g1h1,g1h1,e4f5,b4f8,b4e7,e4f5
+10:g4e5,g4h6,g4h6,g4h6,g4h6,g4h6,g4e5,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6,g4h6
+11:f1b5,f1c4,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1c4,f1b5,f1c4,f1c4,f1b5,f1c4,f1c4,f1b5
+12:b3d5,b3d5,b3d5,b3d5,b3f7,b3d5,b3d5,e2d1,b3d5,b3d5,b3d5,e2d1,b3d5,b3d5,b3d5,b3f7,b3d5,b3d5,b3c4,b3d5
+13:d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6,d4e6
+14:c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,h4g4,h4h5,c6d7,c6d7,c6d7,c6d7,c6d7,c6d7,h4h5,c6d7,c6d7,c6d7,c6d7
+15:g8h8,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7
+16:d1d6,d1d6,d1d5,d1d6,d1d6,d1d5,d1d6,d1d5,d1d6,d1d6,d1d2,d1d6,d1d6,d1d5,d1d2,d1d2,d1d5,d1d5,d1d2,d1d5
+17:d3e3,d3e2,d3e2,d3e2,d3e2,d3e3,d3e3,e1e2,d3e2,d3e2,d3e2,d3e2,d3e2,e1e2,e1e2,d3e3,e1e2,d3e2,d3e2,d3e2
+18:e5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,d5e6,e5e6,d5e6,d5e6
+19:e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5,e4d5
+20:g5h3,g5h7,g5h7,g5h7,g5h3,g5h7,g5h7,d1d5,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,g5h7,d1d5,g5h7,g5h7,d1d5
+21:e3f4,e3f4,e3c5,e3f4,e3c5,e3c5,e3d4,e3d4,e3d4,e3d4,e3d4,e3d4,e3d4,e3f4,e3d4,e3c5,e3d4,e3c5,e3d4,e3c5
+22:e2g3,e2f4,e2g3,e2f4,e2f4,d3e3,e2f4,e2g3,e2f4,e2f4,e2f4,e2f4,e2f4,e2f4,e2g3,d3e3,e2g3,e2f4,e2g3,e2f4
+23:d2e4,d2e4,d2e4,d2e4,d2e4,h1g1,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4,d2e4
+24:f8e7,f8e7,d8e7,f8e7,d8e7,d8e7,d8e7,d8e7,f8e7,f8e7,f8e7,f8e7,d8e7,d8e7,f8e7,f8e7,f8e7,f8e7,f8e7,f8e7
+25:b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,b2c3,g4g5,b2c3,b2c3,b2c3,b2c3
+26:e7f8,e5d4,e5d4,e7f8,e5f6,e7f8,e5f5,e5f6,e7f8,e5d4,e7f8,e5d5,e7f8,e7f8,e5d4,e5d4,e5f6,h8g8,e7f8,e5f6
+27:c5e6,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,d3d5,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7,c5d7
+28:f8g8, , ,f8e8,f8g8,f8e8,c5e7,c5e7,f8e8,f8e8, ,f8g8,c5e7,h8g8,f8g8,h8g7, ,f8g8,f8e8,h8g7
+29:e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8,e2e8
+30:e3g5,d4d8,d4d5,e3g5,e3g5,d4d8,d4d8,d4d5,e3g5,d4d8,d4d8,d4d8,d4d8,e3g5,d4d8,e3g5,e3g5,e3g5,d4d5,d4d7
+31:f6e7,g8h8,f6e7,g8h8,e3e8,g7h8,g8f8,f6e7,f6e7,f6e7,g8f8,g8h8,g7h8,f6e7,g8h8,g8h8,g8h8,f6e7,g8f8,g8h8
+32:f5g4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5e4,f5f4,f5f4,f5g4,f5g4,f5g4,f5g4,f5f4,f5f4
+33:e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7b7,e7c7,e7c7,e7c7,e7a7,e7a7,e7a7,e7a7,e7b7,e7b7,e7b7,e7b7,e7b7
+34:e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,a3c5,a3c5,e1d1,e1d1,a3c5,e1d1,e1d1,c1b2,b5c6,b5c6,c1b2,c1b2
+35:g4g5,g4g5,g4g5,g4g5,g4g5,d1c1,g4g5,g4g5,d1c1,d1c1,d1c1,d1c1,d1c1,d1b1,d1b1,g4g5,g4g5, ,g4g5,g4g5
+36:h5h4,h5h4,h5h4,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5
+38:d6d5,e6e5,d6d5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5
+39:d7f8,d7f6,d7f8,d7f6,d7f8,d7f8,d7f8,d7f8,d7f6,d7f6,d7f6,d7f6,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8,d6c8
+40:d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,d4a4,b1b4,d4e5,d4e5,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4
+41:b6c8,b6c8,b6c8,b6c8,b6c8,b6c8,b6a8,b6a8,b6a8,b6a8,b6a8,b6a8,b6a8,b6d7,b6d7,b6d7,b6d7,b6d7,b6d7,b6d7
+42:g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4,g6f4
+43:f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7,e6d7,e6d7,f6d7,e6d7,e6d7,e6d7,e6d7,e6g4, ,e6d7,e6d7
+44:h1e1,h1e1,h1e1,h1e1,h1e1,h1e1,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3,c1e3
+45:a7b6,a7b6,a7b6,a7b6,a6a5,a6a5,a6a5,a6a5,a6a5,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,h8h7,a7b6,a7b6,a7b6
+46:d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,d3d4,h3h4,d3d4,d3d4
+47:c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5,g6g5
+48:d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,e8e4,e8e4,e8e4,e8e4,e8e4,e8e4,e8e4
+49:d6d5,d6d5,d6d5,d6d5,d6d5,d6d5,a7a6,a7a6,a7a6,a7a6,d6d5,d6d5,d6d5,d6d5,d6d5,d6d5,a7a5,a7a5,a7a5,a7a5
+50:b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4b5,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4,b4f4
+51:e6e5,e6e5,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,a7a6,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5
+52:a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8,a6c8
+53:g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,g2e4,a1f1,a1f1,a1f1,a1f1,f2f4
+54:a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,a3a4,c1d2,c1d2,c1d2
+56:b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7g2,b7b2,b7b2,b7b2,b7b2,b7b2,b7b2,b7h1,b7h1
+57:f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4,f6g4, , ,d8g8,d8g8,d8f8,d8f8,d8e8,d8d4
+58:c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6,c3f6
+59:h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f4,h3f2,h3f2,h3f2,h3f2,h3g1,h3g1,h3g1,h3g1,h3g5,h3g5,h3g5
+60:g6f6,g6f6,g6f6,g6f6,g6f6,g6f7,g6f7,g6f7,g6f7,g6f7,g6f7,g6f6,g6f6,g6f6,g6f6,g6f6,g6f7,g6f7,g6f7,g6f7
+61:h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,h6h5,g5g4,g5g4,g5g4
+62:e6a6,e6a6,e6a6,e6a6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6,e6g6
+63:h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5,h7h5
+64:e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,e6c8,g8h8,g8h8,g8h8,g8h8
+65:b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5b3,b5d7,b5d7,b5d7,b5a6,b5a6,b5d7,b5d7,b5d7
+66:b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,b2b4,a2a4,f1a1,f1a1,f1a1,f1a1
+67:f3g4,f3g4,f3g4,f3g4,f3g4,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1,e2e1
+68:h6h5,h6h5,h6h5,h6h5,c5d5,c5d5,c5d5,c5d5,c5d5,c5d5,c5d5,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b2,b6b
+69:f1d2,f1d2,f1d2,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1f4,c1e3,c1e3,c1e3,c1e3,c1e3
+70:c8b7,c8b7,c8b7,c8a6,c8a6,c8a6,c8a6,c8b7,c8b7,c8b7,c8b7,c8b7c8b7,c8b7,c8a6,c8a6,c8a6,c8a6,c8b7,c8b7
+71:e2c1,e2c1,e2c1,e2c1,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e2c3,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2,e3f2
+72:a7d4,a7d4,a7d4,a7d4,a7d4,a7d4,e7e6,e7e6,e7e6,e7e6,e7e6,a7b6,a7b6,a7b6, , ,a7b8,a7b8,a7b8,a7b8
+73:e4e8,e4e8,e4e8,e4e8,e4e8,e4e8,e4e8,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,g8g3,g8g3,g8g3,g8g3
+74:d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,d3f1,h6h5
+75:a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,a1f1,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5,f5e5
+76:c3b5,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,f3e1,c3b5
+77:d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2,e1d2
+78:e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3h6,e3g5,e3g5,e3h6,e3h6,e3h6,e3h6,e3g5,e3g5, ,
+79:e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1,e3c1
+80:f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,f5g4,e7d7,e7d7,e7d7,e7d7,e7d7,e7d7,a6c7,a6c7,a6c7,a6c7
+81:a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,a8a3,d7f7,d7f7,d7f7,d7f7,d7f7
+82:d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,d3d7,f4h3,f4h3,f4h3,f4h3
+83:c6c1,c6c1,c6c1,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c2,c6c1,c6c1,c6c1
+84:g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1h1,g1f2,g1f2,g1f2,g1f2,g1f2,g1f2,g1f1,g1h1,g1h1,g1h1,g1h1,g1h1
+85:a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6a5,a6b6,a6b6,a6b6
+86:e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e5,e6e7,e6e7,e6e7,e6e7,e6e7,e6e8
+87:c3d4,c3d4,c3d4,c3d4,c3c4,c3c4,c3c4, ,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4,c3c4
+88:b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1b2,b1f1,b1f1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1,b1a1
+89:d2e2,d2e2,d2e2,d2c2,d2c2,d2c2,d2b2,d2b2,d2b2,d2b2,d2b2,d2b2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2,d2e2
+90:d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1c1,d1e1,d1e1,d1e1,d1e1,b2b3,b2b3,d1c1,d1c1,d1c1
+91:f6e8,f6e8,f6e8,f6e8,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5,f6d5
+92:h1h2,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2, ,h1h2,h1h2,h1h2,h1h2, ,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2,h1h2
+93:e8f7,e8f7,e8f7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,e8d7,
+94:d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1d2,d1c2
+95:d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5c7,d5f6
+96:d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,d8d7,f8e8
+97:e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6b3,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4,e6c4
+98:e8d8,e8d8,e8d8,e8d8,e8d8,e8d8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8,e8c8
+99:f5h3,f5h3, ,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f5h3,f3e5,f3e5,f3e5,f3e5,f3e5
+100:d8d7,d8d7,d8d7,d8d7,d8d7,f6d7,f6d7,f6d7,f6d7,d8d7,d8d7,d8d7,d8d7,d8d7,f6d7,f6d7,f6d7,f6d7,f6d7,f6d7
+101:d8d4,d8d4,c8d7,d8d4,d8d4,d8d4,c8d7,d8d4,c8d7,c8d7,d8d4,d8d4,d8d4,d8d4,c8d7,c8d7,c8d7,c8d7,c8d7,c8d7
+102:d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1d3,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2,d1e2'
+103:c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6c5,c6a6,c6a6
+104:e2f4,e2f4,e2f4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2d4,e2f4,e2d4
+105:c8d7,c8d7,c8d7,c8d7,c8d7,c8d7,c8b7,c8b7,c8b7, ,c8b7,c8b7,c8b7,c8b7,c8e6,c8d7,c8d7,c8d7,c8d7,c8d7
+106:d3f3,d3e3,d3e3,d3e3,d3e3,d3e3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3f3,d3e3,d3e3,d3e3,d3e3,d3c4
+107:d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7c6,d7b5
+108:f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1e1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1,f1d1
+109:d3c4,d3c4,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3g3,d3c4,d3c4
+110:a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8d8,a8c8
+111:d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8c8,d8e8
+112:d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,d1e3,f1e1,f1e1,f1e1,f1e1,f1e1
+113:d8g8,d8g8,d8f8,d8f8,d8f8,d8f8,d8f8,d8f8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8,d8e8
+114:d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3c2,d3f1,d3f1,d3f1,d3f1,d3f1,d3b1,d3b1,d3b1,d3b1,d3b1,d3c2
+115:c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6e8,c6a8,c6a8,c6a8,c6a8,c6a8,c6a8,c6b7
+116:e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7f8,e7d7,e7d7,e7d7,e7d7
+117:g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7h8,g7g8,g7g8,g7g8,g7g8,g7g8,g7g8
+118:d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8b8,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8e7,d8d7,d8d7
+119:a8e8,a8e8,a8e8,a8e8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8f8,a8d8,a8d8,a8f8,a8d8
+120:b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8a7,b8c7,b8c7,b8c7,b8c7,b8c7,b8c7

@@ -14,7 +14,8 @@ def gen_legal_moves(board,frac=1):
         return legal_moves
     else:
         return np.random.choice(legal_moves, math.floor(frac*len(legal_moves)), replace=False)
-##SYNTETIC DATA GENERATION##
+    
+##SYNTETIC DATA GENERATION - Random model ##
 def generate_synthetic_data_dict(N,size,df,seed=1):
     if size == 1:
         return generate_synthetic_data_single(N,seed,df)
@@ -40,8 +41,6 @@ def generate_synthetic_data_single(N,seed,df):
         legal_moves = gen_legal_moves(board)
         data.append(np.random.choice(legal_moves))
     return data
-
-path=(r"stockfish-windows-x86-64\stockfish\stockfish-windows-x86-64.exe")
 
 def amount_legal_moves_taken(l , df):
     amount = 0
@@ -77,6 +76,7 @@ def evaluate_moves(fen, move, elo=1350):
         # If it's Black to move, invert the score
         if not is_white_to_move:
             move_score = -move_score
+        # engine.quit()  # Quit the engine after use
     return move_score
 
 def moves_dataframe(fen, elo=1350):   
@@ -97,13 +97,16 @@ def moves_dataframe(fen, elo=1350):
 def move_difference(data, df, elo=1350):
     score_difference = []
     moves_df_list = []
+    move_scores = []
     for i in range(len(data)):
         moves_df = moves_dataframe(df['FEN'][i], elo=elo)
         moves_df_list.append(moves_df)
         move_score = moves_df['move_score'][moves_df['move'] == data[i]].values[0]
+        move_scores.append(move_score)
+        print(i)
         stockfish_score = max(moves_df['move_score'])
         score_difference.append(stockfish_score-move_score)
-    return moves_df_list, score_difference
+    return move_scores, moves_df_list, score_difference
         
 
 def percentiles(moves_df):
@@ -127,13 +130,30 @@ def in_percentile(score,percentile):
     else:
         return np.array([1,0,0,0])
     
-def percentile_distribution(moves, df, elo=1350):
+def percentile_distribution(moves, df, filename, elo=1350):
     result = np.zeros(4)
-    moves_df_list, score_difference = move_difference(moves, df, elo=elo)
-    for i in range(len(score_difference)):
-        percentile = percentiles(moves_df_list[i])
-        result += in_percentile(score_difference[i],percentile)
+    move_scores, moves_df_list, score_difference = move_difference(moves, df, elo=elo)
+    
+    # Open the file in append mode
+    with open(filename, 'a') as file:
+        for i in range(len(score_difference)):
+            percentile = percentiles(moves_df_list[i])
+            result += in_percentile(move_scores[i], percentile)
+            
+            # Convert the numpy array to a string
+            result_str = np.array2string(result)
+            
+            # Write the string to the text file
+            file.write(f"{i}: {result_str}\n")
+            
     return result
+
+#### HOW TO OPEN THE FILE ####
+# with open('counts_random_1350.txt', 'r') as file:
+#     counts_random_1350_str = file.read()
+
+# # Convert the string back to a numpy array
+# counts_random_1350 = np.fromstring(counts_random_1350_str.strip('[]'), sep=' ')
 
 # def stockfish_score_function(N, df,elo=1350):
 #     stockfish_score = []
