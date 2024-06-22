@@ -195,68 +195,68 @@ with open('counts_2_1350.txt', 'r') as file:
     counts_2_1350_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_2_1350
-    counts_2_1350_str = (counts_2_1350_str.replace('118:', '')).replace('.',',')
+    counts_2_1350_str = (counts_2_1350_str.replace('98:', '')).replace('.',',')
     counts_2_1350 = ast.literal_eval(counts_2_1350_str.split('\n')[-2])
     
 with open('counts_2_1800.txt', 'r') as file:
     counts_2_1800_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_2_1800
-    counts_2_1800_str = (counts_2_1800_str.replace('118:', '')).replace('.',',')
+    counts_2_1800_str = (counts_2_1800_str.replace('98:', '')).replace('.',',')
     counts_2_1800 = ast.literal_eval(counts_2_1800_str.split('\n')[-2])
     
 with open('counts_2_2250.txt', 'r') as file:
     counts_2_2250_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_2_2250
-    counts_2_2250_str = (counts_2_2250_str.replace('118:', '')).replace('.',',')
+    counts_2_2250_str = (counts_2_2250_str.replace('98:', '')).replace('.',',')
     counts_2_2250 = ast.literal_eval(counts_2_2250_str.split('\n')[-2])
     
 with open('counts_2_2700.txt', 'r') as file:
     counts_2_2700_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_2_2700
-    counts_2_2700_str = (counts_2_2700_str.replace('118:', '')).replace('.',',')
+    counts_2_2700_str = (counts_2_2700_str.replace('98:', '')).replace('.',',')
     counts_2_2700 = ast.literal_eval(counts_2_2700_str.split('\n')[-2])
     
 with open('counts_2_3150.txt', 'r') as file:
     counts_2_3150_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_2_3150
-    counts_2_3150_str = (counts_2_3150_str.replace('118:', '')).replace('.',',')
+    counts_2_3150_str = (counts_2_3150_str.replace('98:', '')).replace('.',',')
     counts_2_3150 = ast.literal_eval(counts_2_3150_str.split('\n')[-2])
     
 with open('counts_3_1350.txt', 'r') as file:
     counts_3_1350_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_3_1350
-    counts_3_1350_str = (counts_3_1350_str.replace('118:', '')).replace('.',',')
+    counts_3_1350_str = (counts_3_1350_str.replace('98:', '')).replace('.',',')
     counts_3_1350 = ast.literal_eval(counts_3_1350_str.split('\n')[-2])
     
 with open('counts_3_1800.txt', 'r') as file:
     counts_3_1800_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_3_1800
-    counts_3_1800_str = (counts_3_1800_str.replace('118:', '')).replace('.',',')
+    counts_3_1800_str = (counts_3_1800_str.replace('98:', '')).replace('.',',')
     counts_3_1800 = ast.literal_eval(counts_3_1800_str.split('\n')[-2])
     
 with open('counts_3_2250.txt', 'r') as file:
     counts_3_2250_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_3_2250
-    counts_3_2250_str = (counts_3_2250_str.replace('118:', '')).replace('.',',')
+    counts_3_2250_str = (counts_3_2250_str.replace('98:', '')).replace('.',',')
     counts_3_2250 = ast.literal_eval(counts_3_2250_str.split('\n')[-2])
 
 with open('counts_3_2700.txt', 'r') as file:
     counts_3_2700_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_3_2700
-    counts_3_2700_str = (counts_3_2700_str.replace('118:', '')).replace('.',',')
+    counts_3_2700_str = (counts_3_2700_str.replace('98:', '')).replace('.',',')
     counts_3_2700 = ast.literal_eval(counts_3_2700_str.split('\n')[-2])
 
 with open('counts_3_3150.txt', 'r') as file:
     counts_3_3150_str = file.read()
 
     # remove the index and open the last array in the file as variable counts_3_3150
-    counts_3_3150_str = (counts_3_3150_str.replace('118:', '')).replace('.',',')
+    counts_3_3150_str = (counts_3_3150_str.replace('98:', '')).replace('.',',')
     counts_3_3150 = ast.literal_eval(counts_3_3150_str.split('\n')[-2])
