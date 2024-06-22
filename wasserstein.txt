@@ -428,3 +428,51 @@ Model: Random vs Model: Ensemble
 3150 vs 2250: Observed Distance: 1.109366225087622e-05, p-value: 0.0831
 3150 vs 2700: Observed Distance: 2.6180830410365807e-05, p-value: 0.0001
 3150 vs 3150: Observed Distance: 1.1286749878114939e-05, p-value: 0.0707
+
+Model 
+
+Ensemble of different size:
+1350 vs 1350: Observed Distance: 0.0, p-value: 1.0
+1350 vs 1800: Observed Distance: 3.155475286960651e-07, p-value: 1.0
+1350 vs 2250: Observed Distance: 1.5063368809021796e-05, p-value: 0.043
+1350 vs 2700: Observed Distance: 2.0626555504302411e-07, p-value: 1.0
+1350 vs 3150: Observed Distance: 1.4875471580172042e-05, p-value: 0.035
+1800 vs 1350: Observed Distance: 3.155475286960651e-07, p-value: 1.0
+1800 vs 1800: Observed Distance: 0.0, p-value: 1.0
+1800 vs 2250: Observed Distance: 1.4793990225513315e-05, p-value: 0.024
+1800 vs 2700: Observed Distance: 3.3387524464137735e-07, p-value: 1.0
+1800 vs 3150: Observed Distance: 1.4605139559113032e-05, p-value: 0.05
+2250 vs 1350: Observed Distance: 1.5063368809021796e-05, p-value: 0.045
+2250 vs 1800: Observed Distance: 1.4793990225513315e-05, p-value: 0.042
+2250 vs 2250: Observed Distance: 0.0, p-value: 1.0
+2250 vs 2700: Observed Distance: 1.5126742234827063e-05, p-value: 0.043
+2250 vs 3150: Observed Distance: 2.011999850252221e-07, p-value: 1.0
+2700 vs 1350: Observed Distance: 2.0626555504302411e-07, p-value: 1.0
+2700 vs 1800: Observed Distance: 3.3387524464137735e-07, p-value: 1.0
+2700 vs 2250: Observed Distance: 1.5126742234827063e-05, p-value: 0.045
+2700 vs 2700: Observed Distance: 0.0, p-value: 1.0
+2700 vs 3150: Observed Distance: 1.4937891568426779e-05, p-value: 0.037
+3150 vs 1350: Observed Distance: 1.4875471580172042e-05, p-value: 0.046
+3150 vs 1800: Observed Distance: 1.4605139559113032e-05, p-value: 0.054
+3150 vs 2250: Observed Distance: 2.011999850252221e-07, p-value: 1.0
+3150 vs 2700: Observed Distance: 1.4937891568426779e-05, p-value: 0.05
+3150 vs 3150: Observed Distance: 0.0, p-value: 1.0
+
+1 vs different sizes
+5 vs 1: Observed Distance: 8.56640901945824e-06, p-value: 0.175
+10 vs 1: Observed Distance: 8.56640901945824e-06, p-value: 0.166
+15 vs 1: Observed Distance: 8.56640901945824e-06, p-value: 0.165
+20 vs 1: Observed Distance: 8.56640901945824e-06, p-value: 0.162
+
+
+20 vs differnt sizes
+5 vs 20: Observed Distance: 8.724852260076264e-06, p-value: 0.133
+10 vs 20: Observed Distance: 8.724852260076264e-06, p-value: 0.152
+15 vs 20: Observed Distance: 8.724852260076264e-06, p-value: 0.161
+20 vs 20: Observed Distance: 8.724852260076264e-06, p-value: 0.175 
+
+Llama3 vs different sizes
+1 vs 5 Observed Distance: 3.5674610087531856e-05, p-value: 0.0
+1 vs 10 Observed Distance: 3.5420589014549953e-05, p-value: 0.0
+1 vs 15 Observed Distance: 3.605097880910819e-05, p-value: 0.0
+1 vs 20 Observed Distance: 2.6727474894872545e-05, p-value: 0.0
