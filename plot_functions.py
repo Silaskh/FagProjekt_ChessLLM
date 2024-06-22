@@ -74,7 +74,7 @@ def distribution_plot(data1, data2=None, label1='Data 1', label2='Data 2', xlabe
         return x_grid1, kde_values1, x_grid2, kde_values2
     
 
-def distribution_plot(data_dict, xlabel='Scores', ylabel='Probability Density', title='Non-Parametric Probability Distribution (KDE)'):
+def distribution_plot_dict(data_dict, xlabel='Scores', ylabel='Probability Density', title='Non-Parametric Probability Distribution (KDE)'):
     plt.figure(figsize=(10, 6))
     
     for label, data in data_dict.items():

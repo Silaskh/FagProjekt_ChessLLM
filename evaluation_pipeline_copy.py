@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import math
 import chess.engine
+import pickle as pkl
 
 df = pd.read_csv('chessData.csv')
 
@@ -14,6 +15,13 @@ def gen_legal_moves(board,frac=1):
         return legal_moves
     else:
         return np.random.choice(legal_moves, math.floor(frac*len(legal_moves)), replace=False)
+    
+def check_legal_moves(data, df):
+    for i in range(len(data)):
+        board = chess.Board(df['FEN'][i])
+        legal_moves = gen_legal_moves(board)
+        if data[i] not in legal_moves:
+            print(i)
     
 ##SYNTETIC DATA GENERATION - Random model ##
 def generate_synthetic_data_dict(N,size,df,seed=1):
@@ -94,11 +102,13 @@ def moves_dataframe(fen, elo=1350):
     return moves_df
 
 
-def move_difference(data, df, elo=1350):
+def move_difference(data, df, filename, elo=1350):
     score_difference = []
     moves_df_list = []
     move_scores = []
     for i in range(len(data)):
+        if data[i] == "None":
+            continue
         moves_df = moves_dataframe(df['FEN'][i], elo=elo)
         moves_df_list.append(moves_df)
         move_score = moves_df['move_score'][moves_df['move'] == data[i]].values[0]
@@ -106,6 +116,14 @@ def move_difference(data, df, elo=1350):
         print(i)
         stockfish_score = max(moves_df['move_score'])
         score_difference.append(stockfish_score-move_score)
+    
+    with open(filename, 'wb') as file:
+        pkl.dump({
+            'score_difference': score_difference,
+            'moves_df_list': moves_df_list,
+            'move_scores': move_scores
+        }, file)
+        
     return move_scores, moves_df_list, score_difference
         
 
@@ -130,13 +148,15 @@ def in_percentile(score,percentile):
     else:
         return np.array([1,0,0,0])
     
-def percentile_distribution(moves, df, filename, elo=1350):
+def percentile_distribution(moves, df, filename1, filename2, elo=1350):
     result = np.zeros(4)
-    move_scores, moves_df_list, score_difference = move_difference(moves, df, elo=elo)
+    move_scores, moves_df_list, score_difference = move_difference(moves, df, filename1, elo=elo)
     
     # Open the file in append mode
-    with open(filename, 'a') as file:
+    with open(filename2, 'a') as file:
         for i in range(len(score_difference)):
+            if moves[i] == "None":
+                continue
             percentile = percentiles(moves_df_list[i])
             result += in_percentile(move_scores[i], percentile)
             
@@ -210,9 +230,8 @@ def get_moves(data):
     with open(data) as f:
         for line in f:
             inx, move = line.split(":")
-            if move != " None\n":
-                move = move[1:-1]
-                moves.append(move)
+            move = move[1:-1]
+            moves.append(move)
     return moves
 
 def get_ensemble_output_dict():
