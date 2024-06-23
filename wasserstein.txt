@@ -431,7 +431,7 @@ Model: Random vs Model: Ensemble
 
 Model 
 
-Ensemble of different size:
+Ensemble of elos size:
 1350 vs 1350: Observed Distance: 0.0, p-value: 1.0
 1350 vs 1800: Observed Distance: 3.155475286960651e-07, p-value: 1.0
 1350 vs 2250: Observed Distance: 1.5063368809021796e-05, p-value: 0.043
